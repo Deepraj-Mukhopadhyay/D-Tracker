@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>D-Tracker Splash</title>
   <link rel="stylesheet" href="splash.css" />
 </head>
 <body>
-  <img src="assets/background.png" alt="Splash Screen" class="splash-image" />
+  <div class="splash-container">
+    <img src="assets/background.png" alt="Splash Screen" class="splash-image" />
+  </div>
 
   <script>
     setTimeout(() => {
       window.location.href = "login.html";
-    }, 3000); // Delay of 3 seconds
+    }, 3000); // 3 second delay
   </script>
 </body>
 </html>
