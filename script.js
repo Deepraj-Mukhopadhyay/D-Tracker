@@ -1,3 +1,3 @@
-setTimeout(() => {
-  window.location.href = "login.html"; // redirect to login after splash
-}, 3000);
+function signInWithGoogle() {
+  alert("Google Sign-In not implemented yet.\nThis is a placeholder for future Firebase Auth.");
+}
