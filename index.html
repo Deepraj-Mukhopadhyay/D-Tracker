@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- ✅ IMPORTANT: Viewport for mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
   <title>D-Tracker Splash</title>
+
+  <!-- ✅ Link to external splash.css -->
   <link rel="stylesheet" href="splash.css" />
 </head>
 <body>
+  <!-- ✅ Wrap your image inside a div container -->
   <div class="splash-container">
     <img src="assets/background.png" alt="Splash Screen" class="splash-image" />
   </div>
 
+  <!-- ✅ Redirect to login.html after 3 seconds -->
   <script>
     setTimeout(() => {
       window.location.href = "login.html";
-    }, 3000); // 3 second delay
+    }, 3000);
   </script>
 </body>
 </html>
