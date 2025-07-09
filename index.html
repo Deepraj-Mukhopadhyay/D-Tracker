@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>D-Tracker Splash Screen</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>D-Tracker Splash</title>
+  <link rel="stylesheet" href="splash.css" />
 </head>
 <body>
-  <div class="splash">
-    <img src="assets/background.png" alt="D-Tracker Splash">
-  </div>
+  <img src="assets/background.png" alt="Splash Screen" class="splash-image" />
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 3000); // Delay of 3 seconds
+  </script>
 </body>
 </html>
