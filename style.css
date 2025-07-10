@@ -43,14 +43,21 @@ body.login-page {
 }
 
 .login-box .icon {
-  width: 50px;
+  width: 100px;
   margin-bottom: 10px;
 }
+
 
 .login-box h1 {
   color: #264653;
   font-size: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
+}
+
+.login-box h2 {
+  color: #264653;
+  font-size: 15px;
+  margin-bottom: 15px;
 }
 
 form input {
@@ -63,6 +70,15 @@ form input {
   font-size: 14px;
 }
 
+
+
+form input:hover {
+  background-color: #ffd8aa;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transform: scale(1.02);
+}
+
+
 form button {
   width: 100%;
   padding: 12px;
@@ -72,6 +88,12 @@ form button {
   border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
+}
+
+form button:hover {
+  background-color: #d65f45;
+  transform: scale(1.02);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .or-divider {
@@ -103,8 +125,8 @@ form button {
 .google-signin-btn:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   background-color: #f7f7f7;
+  transform: scale(1.02);
 }
-
 .google-signin-btn img {
   width: 20px;
   height: 20px;
@@ -122,6 +144,11 @@ form button {
   font-weight: 600;
 }
 
+.signup-text a:hover {
+  color: #ba4a39;
+  text-decoration: underline;
+    transform: scale(1.02);
+}
 
 
 
