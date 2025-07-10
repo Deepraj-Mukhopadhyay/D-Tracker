@@ -136,18 +136,18 @@ form button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5vw; /* Safe margin */
+  padding: 10vw; /* Safe margin */
 }
 
 /* Image responsiveness */
 .splash-image {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  max-width: 400px;     /* Limits the width on large screens */
+  height: auto;
   object-fit: contain;
   animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Optional fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -156,5 +156,12 @@ form button {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* ✅ Put this AFTER the keyframes, outside everything */
+@media only screen and (max-width: 480px) {
+  .splash-image {
+    max-width: 80vw;
   }
 }
