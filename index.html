@@ -1,27 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Splash Screen</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- ✅ IMPORTANT: Viewport for mobile scaling -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffe8cc; /* Light pastel background */
+      font-family: 'Poppins', sans-serif;
+    }
 
-  <title>D-Tracker Splash</title>
+    .image-box {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      background-color: #fff3e2;
+    }
 
-  <!-- ✅ Link to external splash.css -->
-  <link rel="stylesheet" href="splash.css" />
-</head>
-<body>
-  <!-- ✅ Wrap your image inside a div container -->
-  <div class="splash-container">
-    <img src="assets/background.jpg" alt="Splash Screen" class="splash-image" />
-  </div>
-
-  <!-- ✅ Redirect to login.html after 3 seconds -->
+    .image-box img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+  </style>
   <script>
     setTimeout(() => {
       window.location.href = "login.html";
     }, 3000);
   </script>
+</head>
+<body>
+  <div class="image-box">
+    <img src="assets/background.png" alt="Splash Image" />
+  </div>
 </body>
 </html>
+
