@@ -30,11 +30,46 @@
   <span>Sign in via Google</span>
 </button>
 
-  <script>
-    function signInWithGoogle() {
-      alert("These features are under construction 🚧 and I will develop this soon 🛠️. With love ❤️, from Deepraj ✨.");
-    }
-  </script>
+
+   <script type="module">
+  // Import Firebase functions
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+  // Your Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyDzmYJhCQGjWTEwTZMd4Q46DJmgv8R8egQ",
+    authDomain: "d-tracker-app-19d2003y.firebaseapp.com",
+    projectId: "d-tracker-app-19d2003y",
+    storageBucket: "d-tracker-app-19d2003y.firebasestorage.app",
+    messagingSenderId: "335123670349",
+    appId: "1:335123670349:web:f196ee0eda9e34f0ee4304",
+    measurementId: "G-ZGXYB40EYY"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  // Expose the function to global scope
+  window.signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        alert(`Welcome ${user.displayName} 🎉`);
+        console.log("User:", user);
+        // You can also redirect or store user data
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Google Sign-In failed: " + error.message);
+      });
+  };
+</script>
+ 
 
     <p class="signup-text">New user? <a href="#">Sign up</a></p>
   </div>
