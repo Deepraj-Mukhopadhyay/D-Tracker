@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D-Tracker Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="app-logo">
+        <img src="assets/logo.png" alt="App Logo" />
+        <h1>D-Tracker</h1>
+      </div>
+      <button class="settings-btn" onclick="goTo('settings.html')">
+        ⚙️
+      </button>
+    </div>
+
+    <!-- Card Grid -->
+    <div class="card-grid">
+      <div class="card" onclick="goTo('food.html')">
+        <img src="assets/food.png" alt="Food" />
+        <span>Food Tracker</span>
+      </div>
+      <div class="card" onclick="goTo('water.html')">
+        <img src="assets/water.png" alt="Water" />
+        <span>Water Intake</span>
+      </div>
+      <div class="card" onclick="goTo('exercise.html')">
+        <img src="assets/exercise.png" alt="Exercise" />
+        <span>Exercise</span>
+      </div>
+      <div class="card" onclick="goTo('diary.html')">
+        <img src="assets/notes.png" alt="Diary" />
+        <span>Daily Diary</span>
+      </div>
+      <div class="card" onclick="goTo('period.html')">
+        <img src="assets/periodt.png" alt="Cycle" />
+        <span>Cycle Tracker</span>
+      </div>
+      <div class="card" onclick="goTo('calendar.html')">
+        <img src="assets/calender.png" alt="Calendar" />
+        <span>Calendar</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
